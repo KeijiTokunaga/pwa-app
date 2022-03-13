@@ -1,28 +1,38 @@
-import React from "react";
-import logo from "./logo.svg";
+import { useState, useEffect } from "react";
 import "./App.css";
-import { getTasks } from "./firebase";
+import { FilterableProductTable } from "./components/page/FilterableProductTable";
+import { Product } from "./components/model/product";
+import "firebase/compat/firestore";
+import firebase from "firebase/compat/app";
+import { firebaseConfig } from "./components/functional/firebase";
+
+if (firebase.apps.length === 0) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 function App() {
+  const [products, setProducts] = useState<Product[]>([]);
+  useEffect(() => {
+    const db = firebase.firestore();
+    db.collection("product")
+      .get()
+      .then((result) => {
+        const data = result.docs.map((d) => ({
+          id: d.id,
+          category: d.data().category,
+          name: d.data().name,
+          price: d.data().price,
+          stocked: d.data().stocked,
+        }));
+        console.log(data);
+        setProducts(data);
+      });
+  }, []);
+
   return (
-    <div className="App">
-      <div className="SW-update-dialog"></div>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          AAAAAAAA Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <button onClick={getTasks}>AAAAAAAAA</button>
-      </header>
-    </div>
+    <>
+      <FilterableProductTable products={products} />
+    </>
   );
 }
 

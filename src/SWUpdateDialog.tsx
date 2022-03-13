@@ -6,7 +6,7 @@ export const SWUpdateDialog: React.FC<{
   const [show, setShow] = useState(!!registration.waiting);
   const style: React.CSSProperties = {
     width: "100%",
-    backgroundColor: "green",
+    backgroundColor: "blue",
   };
   const handleUpdate = () => {
     registration.waiting?.postMessage({ type: "SKIP_WAITING" });
