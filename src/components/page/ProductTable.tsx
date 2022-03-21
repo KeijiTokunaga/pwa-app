@@ -17,31 +17,7 @@ export const ProductTable: React.FC<Props> = ({
 }) => {
   const data = useMemo(() => products, [products]);
   const columns = useMemo(() => productcolumns, []);
-  /*
-  const rows: JSX.Element[] = [];
-  let lastCategory: string = "";
 
-  products.forEach((product) => {
-    if (product.name.indexOf(filterText) === -1) {
-      return;
-    }
-    if (inStockOnly && !product.stocked) {
-      return;
-    }
-    if (product.category !== lastCategory) {
-      rows.push(
-        <ProductCategoryRow
-          category={product.category}
-          key={product.category}
-        />
-      );
-    }
-    rows.push(<ProductRow product={product} key={product.name} />);
-    lastCategory = product.category;
-  });
-  */
-
-  //console.log(data);
   const tableInstance = useTable({ columns, data });
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     tableInstance;
