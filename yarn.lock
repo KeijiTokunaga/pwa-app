@@ -3485,6 +3485,11 @@
     "strip-ansi" "^6.0.0"
     "wrap-ansi" "^7.0.0"
 
+"clsx@^1.1.0":
+  "integrity" "sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA=="
+  "resolved" "https://registry.npmjs.org/clsx/-/clsx-1.1.1.tgz"
+  "version" "1.1.1"
+
 "co@^4.6.0":
   "integrity" "sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ="
   "resolved" "https://registry.npmjs.org/co/-/co-4.6.0.tgz"
@@ -7845,7 +7850,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.7.2":
+"prop-types@^15.5.0", "prop-types@^15.7.2":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -8106,6 +8111,14 @@
   "resolved" "https://registry.npmjs.org/react-table/-/react-table-7.7.0.tgz"
   "version" "7.7.0"
 
+"react-tabs@^4.0.1":
+  "integrity" "sha512-Xldj56RHhaRd37iftOwnnjsFEemHY2R07EQ9x5EqOApGauxhdLi7fc/sEKJrtFANHnasNXzSnCWdJ0ulEamMoQ=="
+  "resolved" "https://registry.npmjs.org/react-tabs/-/react-tabs-4.0.1.tgz"
+  "version" "4.0.1"
+  dependencies:
+    "clsx" "^1.1.0"
+    "prop-types" "^15.5.0"
+
 "react-test-renderer@^17.0.2":
   "integrity" "sha512-yaQ9cB89c17PUb0x6UfWRs7kQCorVdHlutU1boVPEsB8IDZH6n9tHxMacc3y0JoXOJUsZb/t/Mb8FUWMKaM7iQ=="
   "resolved" "https://registry.npmjs.org/react-test-renderer/-/react-test-renderer-17.0.2.tgz"
@@ -8116,7 +8129,7 @@
     "react-shallow-renderer" "^16.13.1"
     "scheduler" "^0.20.2"
 
-"react@*", "react@^16.0.0 || ^17.0.0", "react@^16.8.3 || ^17.0.0-0", "react@^17.0.2", "react@>= 16", "react@>= 16.8.0", "react@>=16.8", "react@17.0.2":
+"react@*", "react@^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0-0", "react@^16.8.3 || ^17.0.0-0", "react@^17.0.2", "react@>= 16", "react@>= 16.8.0", "react@>=16.8", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
