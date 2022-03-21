@@ -5,6 +5,9 @@ import { Product } from "./components/model/product";
 import "firebase/compat/firestore";
 import firebase from "firebase/compat/app";
 import { firebaseConfig } from "./components/functional/firebase";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+import { RegistProductForm } from "./components/page/RegistProductForm";
 
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
@@ -29,9 +32,18 @@ function App() {
   }, []);
 
   return (
-    <>
-      <FilterableProductTable products={products} />
-    </>
+    <Tabs>
+      <TabList>
+        <Tab>検索</Tab>
+        <Tab>登録</Tab>
+      </TabList>
+      <TabPanel>
+        <FilterableProductTable products={products} />
+      </TabPanel>
+      <TabPanel>
+        <RegistProductForm />
+      </TabPanel>
+    </Tabs>
   );
 }
 

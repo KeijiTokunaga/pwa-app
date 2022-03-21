@@ -2364,6 +2364,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-tabs@^2.3.4":
+  "integrity" "sha512-HQzhKW+RF/7h14APw/2cu4Nnt+GmsTvfBKbFdn/NbYpb8Q+iB65wIkPHz4VRKDxWtOpNFpOUtzt5r0LRmQMfOA=="
+  "resolved" "https://registry.npmjs.org/@types/react-tabs/-/react-tabs-2.3.4.tgz"
+  "version" "2.3.4"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-test-renderer@^17.0.1":
   "integrity" "sha512-3Fi2O6Zzq/f3QR9dRnlnHso9bMl7weKCviFmfF6B4LS1Uat6Hkm15k0ZAQuDz+UBq6B3+g+NM6IT2nr5QgPzCw=="
   "resolved" "https://registry.npmjs.org/@types/react-test-renderer/-/react-test-renderer-17.0.1.tgz"
