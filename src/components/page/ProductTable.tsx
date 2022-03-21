@@ -1,6 +1,4 @@
 import React, { useMemo } from "react";
-import { ProductCategoryRow } from "./ProductCategoryRow";
-import { ProductRow } from "./ProductRow";
 import { Product, productcolumns } from "../model/product";
 import { useTable } from "react-table";
 
