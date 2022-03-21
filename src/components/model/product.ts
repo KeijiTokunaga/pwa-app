@@ -5,6 +5,14 @@ export type Product = {
   stocked: boolean;
 };
 
+export const productcolumns: any = [
+  { Header: "カテゴリ", accessor: "category" },
+  { Header: "商品名", accessor: "name" },
+  { Header: "価格", accessor: "price" },
+  { Header: "在庫", accessor: "stocked" },
+];
+
+/*
 export type Columns = {
   title: string;
   dataIndex: string;
@@ -67,3 +75,4 @@ export const PRODUCTS: Product[] = [
   },
   { category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7" },
 ];
+*/

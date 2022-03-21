@@ -24,7 +24,6 @@ function App() {
           price: d.data().price,
           stocked: d.data().stocked,
         }));
-        console.log(data);
         setProducts(data);
       });
   }, []);

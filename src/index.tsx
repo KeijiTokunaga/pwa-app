@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
-import { SWUpdateDialog } from "./SWUpdateDialog";
+import { SWUpdateDialog } from "./components/ui/SWUpdateDialog";
 
 ReactDOM.render(
   <React.StrictMode>
