@@ -13,7 +13,19 @@ export const ProductTable: React.FC<Props> = ({
   filterText,
   inStockOnly,
 }) => {
-  const data = useMemo(() => products, [products]);
+  let filterProducts: Product[] = [];
+
+  products.forEach((product) => {
+    if (product.name.indexOf(filterText) === -1) {
+      return;
+    }
+    if (inStockOnly && !product.stocked) {
+      return;
+    }
+    filterProducts.push(product);
+  });
+
+  const data = useMemo(() => filterProducts, [filterProducts]);
   const columns = useMemo(() => productcolumns, []);
 
   const tableInstance = useTable({ columns, data });
